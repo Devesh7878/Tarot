@@ -41,3 +41,16 @@ test("buildKit groups detected technologies into contiguous study ranges", () =>
   assert.ok(kit.questionBank.some((question) => question.question.includes("React feature")));
   assert.ok(kit.questionBank.some((question) => question.question.includes("Node.js service")));
 });
+
+test("buildKit never creates a topic range beyond the requested final day", () => {
+  const kit = buildKit(
+    "Senior engineer using React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, AWS, and Docker.",
+    "https://example.com/careers",
+    5,
+  );
+
+  assert.ok(kit.roleBreakdown.includes("Days 5-5:"));
+  assert.ok(!kit.roleBreakdown.includes("Days 6-5:"));
+  assert.equal(kit.schedule.at(-1).day, 5);
+  assert.equal(kit.schedule.at(-1).topicRange.split("-").at(-1), "5");
+});
