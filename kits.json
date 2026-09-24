@@ -1,0 +1,266 @@
+{
+  "generatedAt": "2026-09-24T10:05:45.242Z",
+  "results": [
+    {
+      "id": "case-1",
+      "status": "ok",
+      "issues": [],
+      "kit": {
+        "companyBrief": {
+          "title": "example.com interview preparation",
+          "summary": "This role is likely centered on frontend engineering with react and ui craftsmanship and typescript and javascript application design. The prep kit focuses on core execution, product judgment, and communication patterns that are often tested in interviews."
+        },
+        "roleBreakdown": "The role emphasizes the following themes:\n- Frontend engineering with React and UI craftsmanship (must)\n- TypeScript and JavaScript application design (must)\n- Mentoring juniors and building engineering capability (must)\n- Ownership, prioritization, and delivery under ambiguity (must)",
+        "requirements": [
+          {
+            "id": "REQ-001",
+            "category": "technical",
+            "priority": "must",
+            "text": "Frontend engineering with React and UI craftsmanship"
+          },
+          {
+            "id": "REQ-002",
+            "category": "technical",
+            "priority": "must",
+            "text": "TypeScript and JavaScript application design"
+          },
+          {
+            "id": "REQ-006",
+            "category": "behavioral",
+            "priority": "must",
+            "text": "Mentoring juniors and building engineering capability"
+          },
+          {
+            "id": "REQ-007",
+            "category": "leadership",
+            "priority": "must",
+            "text": "Ownership, prioritization, and delivery under ambiguity"
+          }
+        ],
+        "questionBank": [
+          {
+            "id": "Q-REQ-001",
+            "requirementId": "REQ-001",
+            "category": "technical",
+            "question": "How would you break this feature into small, testable pieces and validate each one? (Frontend engineering with React and UI craftsmanship)",
+            "answerOutline": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          },
+          {
+            "id": "Q-REQ-002",
+            "requirementId": "REQ-002",
+            "category": "technical",
+            "question": "What trade-offs would you consider when designing the production architecture for this requirement? (TypeScript and JavaScript application design)",
+            "answerOutline": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          },
+          {
+            "id": "Q-REQ-006",
+            "requirementId": "REQ-006",
+            "category": "behavioral",
+            "question": "How do you give feedback or coach a teammate without slowing delivery? (Mentoring juniors and building engineering capability)",
+            "answerOutline": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          },
+          {
+            "id": "Q-REQ-007",
+            "requirementId": "REQ-007",
+            "category": "leadership",
+            "question": "Describe a time you took ownership of a project and drove it from ambiguity to delivery. (Ownership, prioritization, and delivery under ambiguity)",
+            "answerOutline": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "F-1",
+            "question": "How would you break this feature into small, testable pieces and validate each one? (Frontend engineering with React and UI craftsmanship)",
+            "answer": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          },
+          {
+            "id": "F-2",
+            "question": "What trade-offs would you consider when designing the production architecture for this requirement? (TypeScript and JavaScript application design)",
+            "answer": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          },
+          {
+            "id": "F-3",
+            "question": "How do you give feedback or coach a teammate without slowing delivery? (Mentoring juniors and building engineering capability)",
+            "answer": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          },
+          {
+            "id": "F-4",
+            "question": "Describe a time you took ownership of a project and drove it from ambiguity to delivery. (Ownership, prioritization, and delivery under ambiguity)",
+            "answer": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          }
+        ],
+        "schedule": [
+          {
+            "day": 1,
+            "focus": "Core technical depth",
+            "questionIds": [
+              "Q-REQ-001"
+            ],
+            "duration": 40
+          },
+          {
+            "day": 2,
+            "focus": "Product thinking",
+            "questionIds": [
+              "Q-REQ-002"
+            ],
+            "duration": 40
+          },
+          {
+            "day": 3,
+            "focus": "Behavioral communication",
+            "questionIds": [
+              "Q-REQ-006"
+            ],
+            "duration": 40
+          },
+          {
+            "day": 4,
+            "focus": "Leadership and ownership",
+            "questionIds": [
+              "Q-REQ-007"
+            ],
+            "duration": 40
+          },
+          {
+            "day": 5,
+            "focus": "Review and recap",
+            "questionIds": [
+              "Q-REVIEW"
+            ],
+            "duration": 30
+          }
+        ],
+        "days": 5,
+        "coverage": {
+          "total": 4,
+          "covered": 4,
+          "missing": 0
+        }
+      }
+    },
+    {
+      "id": "case-2",
+      "status": "ok",
+      "issues": [],
+      "kit": {
+        "companyBrief": {
+          "title": "example.net interview preparation",
+          "summary": "This role is likely centered on backend integration and api-driven product work and system design and scalable architecture thinking. The prep kit focuses on core execution, product judgment, and communication patterns that are often tested in interviews."
+        },
+        "roleBreakdown": "The role emphasizes the following themes:\n- Backend integration and API-driven product work (must)\n- System design and scalable architecture thinking (must)\n- Cross-functional communication and stakeholder alignment (must)\n- Ownership, prioritization, and delivery under ambiguity (must)",
+        "requirements": [
+          {
+            "id": "REQ-003",
+            "category": "technical",
+            "priority": "must",
+            "text": "Backend integration and API-driven product work"
+          },
+          {
+            "id": "REQ-004",
+            "category": "technical",
+            "priority": "must",
+            "text": "System design and scalable architecture thinking"
+          },
+          {
+            "id": "REQ-005",
+            "category": "behavioral",
+            "priority": "must",
+            "text": "Cross-functional communication and stakeholder alignment"
+          },
+          {
+            "id": "REQ-007",
+            "category": "leadership",
+            "priority": "must",
+            "text": "Ownership, prioritization, and delivery under ambiguity"
+          }
+        ],
+        "questionBank": [
+          {
+            "id": "Q-REQ-003",
+            "requirementId": "REQ-003",
+            "category": "technical",
+            "question": "How would you break this feature into small, testable pieces and validate each one? (Backend integration and API-driven product work)",
+            "answerOutline": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          },
+          {
+            "id": "Q-REQ-004",
+            "requirementId": "REQ-004",
+            "category": "technical",
+            "question": "What trade-offs would you consider when designing the production architecture for this requirement? (System design and scalable architecture thinking)",
+            "answerOutline": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          },
+          {
+            "id": "Q-REQ-005",
+            "requirementId": "REQ-005",
+            "category": "behavioral",
+            "question": "How do you give feedback or coach a teammate without slowing delivery? (Cross-functional communication and stakeholder alignment)",
+            "answerOutline": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          },
+          {
+            "id": "Q-REQ-007",
+            "requirementId": "REQ-007",
+            "category": "leadership",
+            "question": "Describe a time you took ownership of a project and drove it from ambiguity to delivery. (Ownership, prioritization, and delivery under ambiguity)",
+            "answerOutline": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "F-1",
+            "question": "How would you break this feature into small, testable pieces and validate each one? (Backend integration and API-driven product work)",
+            "answer": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          },
+          {
+            "id": "F-2",
+            "question": "What trade-offs would you consider when designing the production architecture for this requirement? (System design and scalable architecture thinking)",
+            "answer": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          },
+          {
+            "id": "F-3",
+            "question": "How do you give feedback or coach a teammate without slowing delivery? (Cross-functional communication and stakeholder alignment)",
+            "answer": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          },
+          {
+            "id": "F-4",
+            "question": "Describe a time you took ownership of a project and drove it from ambiguity to delivery. (Ownership, prioritization, and delivery under ambiguity)",
+            "answer": "Explain the trade-offs, your decision-making process, and how you would validate the result in a real project."
+          }
+        ],
+        "schedule": [
+          {
+            "day": 1,
+            "focus": "Core technical depth",
+            "questionIds": [
+              "Q-REQ-003",
+              "Q-REQ-007"
+            ],
+            "duration": 80
+          },
+          {
+            "day": 2,
+            "focus": "Product thinking",
+            "questionIds": [
+              "Q-REQ-004"
+            ],
+            "duration": 40
+          },
+          {
+            "day": 3,
+            "focus": "Behavioral communication",
+            "questionIds": [
+              "Q-REQ-005"
+            ],
+            "duration": 40
+          }
+        ],
+        "days": 3,
+        "coverage": {
+          "total": 4,
+          "covered": 4,
+          "missing": 0
+        }
+      }
+    }
+  ]
+}

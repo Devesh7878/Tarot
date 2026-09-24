@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trao Interview Prep Kit
 
-## Getting Started
+This project is a polished interview-prep application with user authentication, MongoDB persistence, and end-to-end interview kit generation. It accepts a job description and company URL, extracts likely requirements, and turns them into a study kit with questions, flashcards and a schedule.
 
-First, run the development server:
+## Features
+
+- Login and registration flow
+- MongoDB Atlas persistence for users and saved kits
+- Interview-kit generation with deterministic fallback logic
+- Optional OpenAI-powered generation when `OPENAI_API_KEY` is configured
+- Batch evaluation entry point for multiple job descriptions
+
+## Local setup
+
+1. Copy `.env.example` to `.env.local` and add your own MongoDB Atlas connection string and JWT secret.
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the app:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Batch evaluation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run evaluate -- --input cases.json --output kits.json
+```
 
-## Learn More
+Example input:
 
-To learn more about Next.js, take a look at the following resources:
+```json
+[
+  {
+    "id": "case-1",
+    "jd": "Senior frontend engineer with React, TypeScript, mentoring and product leadership experience.",
+    "company_url": "https://example.com/careers",
+    "days": 5
+  }
+]
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The app expects the following values in `.env.local`:
 
-## Deploy on Vercel
+- `MONGODB_URI` — your MongoDB Atlas cluster connection string
+- `MONGODB_DB_NAME` — database name, defaults to `interview-kit`
+- `JWT_SECRET` — secret used for signed login sessions
+- `OPENAI_API_KEY` — optional, enables AI-based kit generation
+- `OPENAI_MODEL` — optional default model (`gpt-4o-mini`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev` — start the app locally
+- `npm run build` — build for production
+- `npm run start` — preview the production build
+- `npm run lint` — lint the codebase
+- `npm run evaluate` — run the batch generator
+- `npm test` — validate the core logic
+
+## Notes
+
+The application uses a deterministic kit builder as a secure fallback, and only calls OpenAI when an API key is set. That keeps the project operational even when AI credentials are unavailable.

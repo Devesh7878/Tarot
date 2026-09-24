@@ -1,0 +1,14 @@
+[
+  {
+    "id": "case-1",
+    "jd": "Senior frontend engineer with React, TypeScript, mentoring and product leadership experience.",
+    "company_url": "https://example.com/careers",
+    "days": 5
+  },
+  {
+    "id": "case-2",
+    "jd": "Backend engineer needed for APIs, PostgreSQL, and system design. We value ownership and communication.",
+    "company_url": "https://example.net/jobs",
+    "days": 3
+  }
+]
