@@ -13,6 +13,7 @@ const kitSchema = new mongoose.Schema(
     questionBank: { type: Array, default: [] },
     flashcards: { type: Array, default: [] },
     schedule: { type: Array, default: [] },
+    technologies: { type: Array, default: [] },
     coverage: { type: Object, default: {} },
   },
   { timestamps: true },

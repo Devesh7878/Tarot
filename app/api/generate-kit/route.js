@@ -48,6 +48,7 @@ export async function POST(request) {
       questionBank: kit.questionBank,
       flashcards: kit.flashcards,
       schedule: kit.schedule,
+      technologies: kit.technologies,
       coverage: kit.coverage,
     });
 

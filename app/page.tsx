@@ -401,6 +401,26 @@ export default function Home() {
                   </section>
 
                   <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div className="flex items-center justify-between gap-4">
+                      <h3 className="text-lg font-semibold">Day-by-day plan</h3>
+                      <span className="text-xs text-slate-500">{selectedKit.days || selectedKit.schedule?.length || 0} days</span>
+                    </div>
+                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                      {selectedKit.schedule?.map((day: any) => (
+                        <div key={day.day} className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                          <div className="flex items-center justify-between gap-3">
+                            <span className="font-semibold text-slate-800">Day {day.day}</span>
+                            <span className="rounded-full bg-blue-100 px-2 py-1 text-[10px] font-semibold text-blue-700">{day.topic}</span>
+                          </div>
+                          <p className="mt-3 text-sm font-medium text-slate-700">{day.focus}</p>
+                          <p className="mt-1 text-xs text-slate-500">Topic range: Days {day.topicRange}</p>
+                          <p className="mt-1 text-xs text-slate-500">{day.duration} minutes</p>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+
+                  <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
                     <h3 className="text-lg font-semibold">Question bank</h3>
                     <div className="mt-4 space-y-4">
                       {selectedKit.questionBank?.map((question: any) => (

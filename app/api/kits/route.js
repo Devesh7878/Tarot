@@ -29,6 +29,7 @@ export async function GET(request) {
           questionBank: kit.questionBank,
           flashcards: kit.flashcards,
           schedule: kit.schedule,
+          technologies: kit.technologies,
           coverage: kit.coverage,
           days: kit.days,
         },

@@ -23,3 +23,21 @@ test("buildKit creates a valid schedule and full coverage", () => {
   assert.equal(validateKit(kit).length, 0);
   assert.ok(kit.questionBank.length >= kit.requirements.length);
 });
+
+test("buildKit groups detected technologies into contiguous study ranges", () => {
+  const kit = buildKit(
+    "Frontend engineer using React for the product UI and Node.js for backend services.",
+    "https://example.com/careers",
+    5,
+  );
+
+  assert.deepEqual(kit.technologies, ["React", "Node.js"]);
+  assert.match(kit.roleBreakdown, /Days 1-3: React UI and component architecture/);
+  assert.match(kit.roleBreakdown, /Days 4-5: Node\.js services and APIs/);
+  assert.equal(kit.schedule[0].topic, "React");
+  assert.equal(kit.schedule[2].topic, "React");
+  assert.equal(kit.schedule[3].topic, "Node.js");
+  assert.equal(kit.schedule[4].topic, "Node.js");
+  assert.ok(kit.questionBank.some((question) => question.question.includes("React feature")));
+  assert.ok(kit.questionBank.some((question) => question.question.includes("Node.js service")));
+});
